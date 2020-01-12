@@ -1,0 +1,20 @@
+name: EldenGame
+version: 0.1
+author: iElden
+main: fr.ielden.eldengames.EldenGames
+commands:
+  start:
+    description: launch game
+    permission: eldengames.start
+  setteam:
+    description: set the team of a player
+    permission: eldengames.admin
+  setnexushp:
+    description: set the nexus hp to given number
+    permission: eldengames.admin
+  gameinfo:
+    description: display gameinfo
+    permission: eldengames.admin
+  test:
+    description: test
+    permission: eldengames.test
