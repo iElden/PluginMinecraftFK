@@ -1,7 +1,6 @@
 package fr.ielden.eldengames.commands;
 
 import fr.ielden.eldengames.EldenGames;
-import fr.ielden.eldengames.Functions;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -23,7 +22,6 @@ public class TestCmd implements CommandExecutor {
             return false;
         }
         Player player = (Player) commandSender;
-        Functions.create_domination_point(new Location(Bukkit.getWorld("world"), -58, 85, 11));
         return true;
     }
 }
