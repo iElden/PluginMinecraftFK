@@ -42,7 +42,7 @@ public class SetNexusHP implements CommandExecutor {
             return false;
         }
         nexus.hp = hp;
-        Bukkit.broadcastMessage(commandSender.getName() + ChatColor.YELLOW + "a set le nombre de point de vie du nexus " + args[0] + " à " + nexus.string_hp());
+        Bukkit.broadcastMessage(commandSender.getName() + ChatColor.YELLOW + " a set le nombre de point de vie du nexus " + args[0] + " à " + nexus.string_hp());
         return true;
     }
 }

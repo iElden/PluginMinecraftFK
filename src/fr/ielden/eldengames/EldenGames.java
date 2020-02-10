@@ -1,16 +1,13 @@
 package fr.ielden.eldengames;
 
-import fr.ielden.eldengames.commands.GameinfoCmd;
-import fr.ielden.eldengames.commands.SetTeam;
-import fr.ielden.eldengames.commands.StartCmd;
-import fr.ielden.eldengames.commands.TestCmd;
+import fr.ielden.eldengames.commands.*;
 import fr.ielden.eldengames.game.Game;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class EldenGames extends JavaPlugin {
 
-    Game game; ;
+    Game game;
 
     @Override
     public void onEnable() {
@@ -19,6 +16,7 @@ public class EldenGames extends JavaPlugin {
         this.game = new Game(this);
         getCommand("start").setExecutor(new StartCmd(this));
         getCommand("setteam").setExecutor(new SetTeam(this));
+        getCommand("setnexushp").setExecutor(new SetNexusHP(this));
         getCommand("gameinfo").setExecutor(new GameinfoCmd(this));
         getCommand("test").setExecutor(new TestCmd(this));
         Bukkit.getServer().getPluginManager().registerEvents(new DeathEvent(this), this);
